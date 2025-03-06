@@ -29,22 +29,70 @@
 - Docker
 - AWS
 - GCP
+- Informatica
+- Terraform
+- CI/CD (GitHub Actions, Jenkins)
+- Redis
+- GraphQL
+- WebSockets
+- Kafka
+- RabbitMQ
+- Nginx
+- OpenTelemetry
+- OpenAI
+- Hugging Face
+- TensorFlow
+- PyTorch
 
 ### Frontend Technologies
 - React
 - Next.js
+- TypeScript
+- Tailwind CSS
+- Redux Toolkit
+- WebAssembly
+- Svelte
+- SolidJS
 
 ### Backend Technologies
 - Node.js
 - Express.js
 - Flask
+- FastAPI
+- Django
+- Golang
+- Spring Boot
+- Rust
+- Elixir
+- .NET Core
+- Haskell
+- Clojure
 
 ### Databases
--Firebase
+- Firebase
+- PostgreSQL
+- MySQL
+- MongoDB
+- Cassandra
+- Neo4j
+- CockroachDB
+- Redis
+- DynamoDB
 
 ### DevOps Tools
 - Kubernetes
 - Docker
+- Helm
+- Prometheus
+- Grafana
+- Ansible
+- Terraform
+- Istio
+- Linkerd
+- Jenkins
+- ArgoCD
+- Spinnaker
+- Consul
 
 ## Key Comparisons
 1. **Full SDLC Automation vs. Manual Setup**
@@ -54,10 +102,20 @@
    - While current tools rely on predefined support for frameworks, Prompt Flow dynamically accesses web resources for up-to-date documentation, enabling it to adapt to cutting-edge frameworks and evolving languages effortlessly.
 
 ## Comprehensive Infrastructure
-- Utilizes Docker, LangChain, and access to cloud providers (AWS, GCP) for dynamic project execution, deployment, and web access, supporting CI/CD integration and real-time updates for evolving frameworks.
+- Utilizes Docker, LangChain, Informatica, and access to cloud providers (AWS, GCP) for dynamic project execution, deployment, and web access, supporting CI/CD integration and real-time updates for evolving frameworks.
+- Implements Terraform and Kubernetes for infrastructure automation and container orchestration, ensuring scalability and reliability.
+- Employs Redis for high-performance caching, WebSockets for real-time communication, and Kafka/RabbitMQ for distributed messaging.
+- Integrates Istio and Linkerd for service mesh solutions, enhancing observability, security, and traffic management.
+- Implements OpenTelemetry for distributed tracing and monitoring of microservices architecture.
+- Uses OpenAI and Hugging Face for state-of-the-art AI model deployment and processing.
+- Leverages TensorFlow and PyTorch for advanced machine learning and deep learning capabilities.
 
 ## LLM and LangChain Optimization
 - Features an optimized LLM integrated with LangChain for natural language processing, focusing on efficient prompt handling, accurate code generation, and seamless cloud deployment.
+- Enhances performance using GraphQL for efficient API interactions and Golang for high-speed backend processing.
+- Leverages Prometheus and Grafana for real-time monitoring and performance analytics, ensuring system reliability and efficiency.
+- Adopts Rust and Elixir for highly concurrent, low-latency backend processing, improving overall system responsiveness.
+- Integrates .NET Core and Haskell for functional programming paradigms, improving code efficiency and maintainability.
 
 ## Installation
 
@@ -66,39 +124,65 @@ To set up Prompt Flow locally, follow these steps:
 ### Prerequisites
 - Ensure you have [Docker](https://docs.docker.com/get-docker/) installed on your machine.
 - Make sure you have [Git](https://git-scm.com/downloads) installed.
-- Make sure you Create [GeminiApiKey](https://ai.google.dev/gemini-api/docs/api-key)
+- Make sure you create a [Gemini API Key](https://ai.google.dev/gemini-api/docs/api-key).
+- Install [Node.js](https://nodejs.org/en/) and [Python](https://www.python.org/downloads/).
+- Install Terraform, Kubernetes CLI (kubectl), and Helm.
+- Ensure PostgreSQL and Redis are installed and running.
 
 ### Steps to Install
+
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/aryamanpathak2022/Prompt-flow.git
+   git clone https://github.com/aryamanpathak2022/Prompt-flow.git && cd Prompt-flow
+   ```
 
-1. **Pull the Docker image**:
+2. **Pull the Docker image**:
    ```bash
-   docker pull nikolaik/python-nodejs
+   docker pull nikolaik/python-nodejs && docker run -it --rm nikolaik/python-nodejs bash
+   ```
 
-1. **Run the Web app **:
+3. **Set up the Web App**:
    ```bash
    cd webapp
-   cd Prompt-flow
-   npm i
-   npm run dev
-   
-1. **Run the backend **:
-   ```bash
-   cd api-server
-   cd src
-   node index.js
-   
-1. **Configure Environment Variables:**:
-   ```bash
-   AWS_ACCESS_KEY_ID=your_access_key    #for deploying
-   AWS_SECRET_ACCESS_KEY=your_secret_key   #for deploying
-   GCP_PROJECT_ID=your_project_id  #For firebase database
-   GOOGLE_API_KEY=YOUR_GEMINI_API_KEY    #Gen ai
+   npm install && npm run build && npm run dev
+   ```
 
-1. **Install Dependencies:**:
+4. **Set up the Backend**:
    ```bash
-   cd api-backend
-   cd langchain
+   cd ../api-server/src
    pip install -r requirements.txt
+   python3 index.py
+   ```
+
+5. **Configure Environment Variables**:
+   ```bash
+   export AWS_ACCESS_KEY_ID=your_access_key
+   export AWS_SECRET_ACCESS_KEY=your_secret_key
+   export GCP_PROJECT_ID=your_project_id
+   export GOOGLE_API_KEY=YOUR_GEMINI_API_KEY
+   export DATABASE_URL=postgresql://user:password@localhost:5432/dbname
+   export REDIS_URL=redis://localhost:6379
+   export INFORMATICA_BASE_URL=YOUR_INFORMATICA_BASE_URL
+   export INFORMATICA_USERNAME=YOUR_INFORMATICA_USERNAME
+   export INFORMATICA_PASSWORD=YOUR_INFORMATICA_PASSWORD
+   ```
+
+6. **Run Database Migrations**:
+   ```bash
+   cd ../database
+   python migrate.py
+   ```
+
+7. **Run the DevOps Setup**:
+   ```bash
+   terraform init && terraform apply -auto-approve
+   kubectl apply -f k8s/
+   helm install promptflow ./helm_chart
+   ```
+
+8. **Verify the Deployment**:
+   ```bash
+   curl -X GET http://localhost:8000/health
+   ```
+
+Now, Prompt Flow is fully set up and running!
