@@ -7,21 +7,28 @@
 
 ## Features
 
-![image](https://github.com/user-attachments/assets/111594d9-c984-4b6e-98d1-db130fc7b6bd)
+![image](https://github.com/user-attachments/assets/b6c90b87-ee17-436d-ab38-239943a10a52)
+
+![image](https://github.com/user-attachments/assets/793c14f6-e4c0-4976-85a6-edbf076f70f9)
+
+![image](https://github.com/user-attachments/assets/042b2c7e-b87e-433e-8897-d774a2bf243e)
+
+![image](https://github.com/user-attachments/assets/f3e068fd-a6b7-4140-86a7-f83b1c03b41e)
+
+![image](https://github.com/user-attachments/assets/b776a208-e05f-4321-aa92-4803f8c106d4)
+
+![image](https://github.com/user-attachments/assets/bceac95f-3c65-452b-84b6-5e0826236b31)
 
 
-![image](https://github.com/user-attachments/assets/c172a6a1-4f16-4ff8-8200-03ed821bf10b)
+## LCNC in Prompt-Flow
 
-![image](https://github.com/user-attachments/assets/cd39df3c-b249-423d-a037-455020abc5e3)
+![image](https://github.com/user-attachments/assets/aa21ad62-d4cc-4742-b5ac-66d4d3858307)
 
-![image](https://github.com/user-attachments/assets/1d6a2237-f386-488a-b870-53c9da2320a3)
+![image](https://github.com/user-attachments/assets/c0b5ace8-f1df-4e80-bd5e-96923a874fa7)
 
-![image](https://github.com/user-attachments/assets/191408d6-7d9f-43c5-97f5-7d25141c73b2)
+## SRS Upload in Prompt-flow
 
-
-## Our Chat Bot
-
-![image](https://i.postimg.cc/yxwPyYzd/image.png)
+![image](https://github.com/user-attachments/assets/72d4a15a-d3d6-44f3-bdaf-daf0f8268bd1)
 
 
 ## Technologies Used
