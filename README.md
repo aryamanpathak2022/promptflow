@@ -7,7 +7,6 @@
 
 ## Features
 
-![image](https://github.com/user-attachments/assets/b6c90b87-ee17-436d-ab38-239943a10a52)
 
 ![image](https://github.com/user-attachments/assets/793c14f6-e4c0-4976-85a6-edbf076f70f9)
 
